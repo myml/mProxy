@@ -89,7 +89,7 @@ func main() {
 		log.Println("host and port is required")
 		return
 	}
-	if lport == nil {
+	if *lport == 0 {
 		lport = port
 	}
 	log.Printf("listen at port %d,proxy to %s:%d", *lport, *host, *port)
